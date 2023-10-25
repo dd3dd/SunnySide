@@ -1,11 +1,13 @@
 import '../assets/Styles/grid-Container.css'
 import Header from './Header'
+import Left2 from './Left2'
 export default function GridContainer() {
     return (
         <div className="grid-Container">
             {/* <div className="header"></div> */}
             <Header />
-            <div className="left2"></div>
+            {/* <div className="left2"></div> */}
+            <Left2 />
             <div className="right2"></div>
             <div className="left3"></div>
             <div className="right3"></div>

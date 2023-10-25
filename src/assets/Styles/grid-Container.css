@@ -1,5 +1,6 @@
 .grid-Container {
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
         'header header header header'
         'left2 left2 right2 right2'
@@ -10,9 +11,99 @@
         'footer footer footer footer';
 }
 
-@media(max-width:768px) {
+.header {
+    grid-area: header;
+    height: 50rem;
+    background-color: #3DBEFF;
+    background-image: url('../images/desktop/image-header.jpg');
+    background-position: center bottom;
+    background-size: cover;
+}
+
+.left2 {
+    grid-area: left2;
+    height: 45vw;
+
+}
+
+.right2 {
+    grid-area: right2;
+    height: 45vw;
+    background-color: #FFD600;
+    background-image: url('../images/desktop/image-transform.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.left3 {
+    grid-area: left3;
+    height: 45vw;
+    background-color: #FE7563;
+    background-image: url('../images/desktop/image-stand-out.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.right3 {
+    grid-area: right3;
+    height: 45vw;
+}
+
+.left4 {
+    grid-area: left4;
+    height: 45vw;
+    background-color: #A0DDCE;
+    background-image: url('../images/desktop/image-graphic-design.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.right4 {
+    grid-area: right4;
+    height: 45vw;
+    background-color: #5CCAFF;
+    background-image: url('../images/desktop/image-photography.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.people {
+    grid-area: people;
+    height: 32rem;
+}
+
+.end1 {
+    grid-area: end1;
+    height: 15rem;
+}
+
+.end2 {
+    grid-area: end2;
+    height: 15rem;
+}
+
+.end3 {
+    grid-area: end3;
+    height: 15rem;
+
+}
+
+.end4 {
+    grid-area: end4;
+    height: 15rem;
+
+}
+
+.footer {
+    grid-area: footer;
+    height: 20rem;
+    background-color: #90D4C5;
+}
+
+@media screen and (max-width:767px) {
     .grid-Container {
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
             'header header'
             'right2 right2'
@@ -33,89 +124,89 @@
         display: none;
     }
 
+    .header {
+        grid-area: header;
+        height: 35rem;
+        background-color: #3DBEFF;
+        /* padding-bottom: 30rem; */
+    }
+
+    .left2 {
+        grid-area: left2;
+        height: 120vw;
+    }
+
+    .right2 {
+        grid-area: right2;
+        height: 80vw;
+        background-color: #FFD600;
+    }
+
+    .left3 {
+        grid-area: left3;
+        height: 80vw;
+        background-color: #FE7563;
+    }
+
+    .right3 {
+        grid-area: right3;
+        height: 120vw;
+    }
+
+    .left4 {
+        grid-area: left4;
+        height: 140vw;
+        background-color: #A0DDCE;
+    }
+
+    .right4 {
+        grid-area: right4;
+        height: 140vw;
+        background-color: #5CCAFF;
+    }
+
     .people1 {
         grid-area: people1;
-        height: 33vh;
+        height: 120vw;
     }
 
     .people2 {
         grid-area: people2;
-        height: 33vh;
+        height: 120vw;
     }
 
     .people3 {
         grid-area: people3;
-        height: 33vh;
+        height: 120vw;
     }
-}
 
-.header {
-    grid-area: header;
-    height: 100vh;
-    background-color: #3DBEFF;
-}
+    /* .people {
+        grid-area: people;
+    } */
 
-.left2 {
-    grid-area: left2;
-    height: 70vh;
-}
+    .end1 {
+        grid-area: end1;
+        height: 50vw;
+    }
 
-.right2 {
-    grid-area: right2;
-    height: 70vh;
-    background-color: #FFD600;
-}
+    .end2 {
+        grid-area: end2;
+        height: 50vw;
+    }
 
-.left3 {
-    grid-area: left3;
-    height: 70vh;
-    background-color: #FE7563;
-}
+    .end3 {
+        grid-area: end3;
+        height: 50vw;
+    }
 
-.right3 {
-    grid-area: right3;
-    height: 70vh;
-}
+    .end4 {
+        grid-area: end4;
+        height: 50vw;
+    }
 
-.left4 {
-    grid-area: left4;
-    height: 70vh;
-    background-color: #A0DDCE;
-}
-
-.right4 {
-    grid-area: right4;
-    height: 70vh;
-    background-color: #5CCAFF;
-}
-
-.people {
-    grid-area: people;
-    height: 100vh;
-}
-
-.end1 {
-    grid-area: end1;
-    height: 50vh;
-}
-
-.end2 {
-    grid-area: end2;
-    height: 50vh;
-}
-
-.end3 {
-    grid-area: end3;
-    height: 50vh;
-}
-
-.end4 {
-    grid-area: end4;
-    height: 50vh;
-}
-
-.footer {
-    grid-area: footer;
-    height: 45vh;
-    background-color: #90D4C5;
+    .footer {
+        grid-area: footer;
+        height: 20rem;
+        background-color: #90D4C5;
+    }
 }
